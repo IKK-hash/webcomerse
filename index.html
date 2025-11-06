@@ -198,3 +198,879 @@
   </script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Toko COMIGO</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+  <!-- CSS Custom -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+}
+
+/* Header & Navbar */
+header {
+  background-color: #fff;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  height: 100vh; /* full layar */
+  background-image: url("img/bui.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* teks di tengah vertikal */
+  align-items: center;     /* teks di tengah horizontal */
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+
+
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background-color: #ffc107;
+  border: none;
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #ffb300;
+  transform: scale(1.05);
+}
+
+
+
+/* Info Section */
+.section-info {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section-info h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.section-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Kontak Section */
+#kontak {
+  background-color: #111;
+  background-color: #000000;
+  color: rgb(16, 16, 16);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#kontak h2 span {
+  color: gold;
+}
+
+.kontak-container {
+  max-width: 900mx;
+  margin: 0 auto;
+  background-color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.kontak-form {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.kontak-map {
+  flex: 1;
+  min-width: 300px;
+}
+
+.kontak-form label {
+  color: gold;
+  font-weight: bold;
+}
+
+.btn-warning {
+  background-color: gold;
+  color: #111;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #fff9f9;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <div class="logo">Toko COMIGO</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Tentang">Tentang Kami</a></li>
+            <li class="nav-item">
+              <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Beranda -->
+  <div id="beranda" class="hero">
+    <h1 data-aos="fade-up" data-aos-duration="3000">Selamat Datang di Toko COMIGO</h1>
+    <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      Nikmati makanan lezat, segar, dan terjangkau setiap hari
+    </p>
+    <a href="menu.html" class="btn">Lihat Menu</a>
+  </div>
+
+  <div class="section-info text-center my-4">
+    <h2 data-aos="fade-down" data-aos-duration="1500">Menu Toko COMIGO</h2>
+    <p data-aos="fade-down" data-aos-duration="1500">Pilih makanan favorit Anda!</p>
+  </div>
+
+  <!-- Tentang Kami -->
+  <div class="Tentang container-fluid bg-white py-5" id="Tentang">
+    <div class="container text-center">
+      <h3 class="display-5" data-aos="fade-up" data-aos-duration="1000"><strong>Tentang Kami</strong></h3>
+      <p data-aos="fade-up" data-aos-duration="1000">
+        Kami adalah toko makanan yang menyajikan hidangan lezat dan terjangkau. Semua menu dibuat dengan bahan berkualitas tinggi dan rasa yang autentik.
+      </p>
+    </div>
+  </div>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-5 bg-light text-center">
+    <h2>My<span style="color: #ff9800;">KONTAK</span></h2>
+    <p>HUBUNGI KONTAK KAMI</p>
+
+    <div class="kontak-container">
+      <div class="kontak-form">
+        <form>
+          <div class="mb-3">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label>ISI PESAN</label>
+            <textarea class="form-control" rows="3" placeholder="Tulis pesan Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning mt-3">KIRIM</button>
+        </form>
+      </div>
+
+      <div class="kontak-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.3243944625991!2d106.99147286961774!3d-6.3555121667393975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c22161d4051%3A0x7a0a35b288779341!2sSMKN%202%20Kota%20Bekasi!5e0!3m2!1sen!2sid!4v1760407004934!5m2!1sen!2sid"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Toko COMIGO. Semua Hak Dilindungi.</p>
+    <p><a href="#">COMIGO.com</a> | <span style="color: gold;">TERIMAKASIH</span></p>
+    <p id="waktu"></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Waktu otomatis di footer
+    const waktuElem = document.getElementById('waktu');
+    setInterval(() => {
+      const now = new Date();
+      waktuElem.textContent = now.toLocaleString('id-ID', { dateStyle: 'full', timeStyle: 'medium' });
+    }, 1000);
+
+    // Login check
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (!loggedInUser) {
+      window.location.href = "login.html";
+    }
+
+    // Logout function
+    function logout() {
+      localStorage.removeItem('loggedInUser');
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Kami - COMIGO</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <section id="menu" class="menu-section">
+    <h2>Menu Kami</h2>
+    <p>Pilih menu favoritmu dan langsung pesan!</p>
+
+    <!-- Tombol tambah menu -->
+    <div class="text-center mb-4">
+      <button class="btn-tambah" onclick="tampilkanForm()">+ Tambah Menu</button>
+    </div>
+
+    <!-- Form tambah menu -->
+    <div id="formTambahMenu" class="form-tambah" style="display: none;">
+      <input type="text" id="namaMenu" placeholder="Nama menu" required>
+      <input type="number" id="hargaMenu" placeholder="Harga (Rp)" required>
+      <input type="url" id="gambarMenu" placeholder="URL Gambar" required>
+      <button class="btn-simpan" onclick="tambahMenu()">Simpan</button>
+    </div>
+
+    <!-- Daftar Menu -->
+    <div class="menu-container" id="menuContainer">
+      <div class="menu-item">
+        <img src="img/271610209-683009639528177-3577032693846942392-n-f86cce9f67ab87e1f2714ff01fb5315e-f1f2c5365f8750a18bb88ef3e8d9aa5c_600x400.jpg" alt="Martabak Mini">
+        <h3>Martabak Mini</h3>
+        <p class="harga">Rp 3.000 / pcs</p>
+        <a href="checkout.html?nama=Martabak%20Mini&harga=3000&jumlah=1" class="btn-bayar">BELI</a>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/1240786-1000xauto-resep-pisang-cokelat.jpg" alt="Pisang Coklat">
+        <h3>Pisang Coklat</h3>
+        <p class="harga">Rp 3.000 / pcs</p>
+        <a href="checkout.html?nama=Pisang%20Coklat&harga=3000&jumlah=1" class="btn-bayar">BELI</a>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/1690687194462395-sosisbakar-1.jpg" alt="Sosis Bakar">
+        <h3>Sosis Bakar</h3>
+        <p class="harga">Rp 8.000</p>
+        <a href="checkout.html?nama=Sosis%20Bakar&harga=8000&jumlah=1" class="btn-bayar">BELI</a>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/kebab-mini-praktis-dari-kulit-lumpia-foto-resep-utama.jpg" alt="Kebab Mini">
+        <h3>Kebab Mini</h3>
+        <p class="harga">Rp 10.000</p>
+        <a href="checkout.html?nama=Kebab%20Mini&harga=10000&jumlah=1" class="btn-bayar">BELI</a>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/steak-21.jpg" alt="Roti Bakar">
+        <h3>Roti Bakar</h3>
+        <p class="harga">Rp 12.000</p>
+        <a href="checkout.html?nama=Roti%20Bakar&harga=12000&jumlah=1" class="btn-bayar">BELI</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuContainer = document.getElementById('menuContainer');
+    const form = document.getElementById('formTambahMenu');
+
+    // Tampilkan/Sembunyikan form tambah menu
+    function tampilkanForm() {
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Tambah menu baru
+    function tambahMenu() {
+      const nama = document.getElementById('namaMenu').value.trim();
+      const harga = document.getElementById('hargaMenu').value.trim();
+      const gambar = document.getElementById('gambarMenu').value.trim();
+
+      if (!nama || !harga || !gambar) {
+        alert('Semua kolom harus diisi!');
+        return;
+      }
+
+      const newItem = { nama, harga, gambar };
+      let customMenus = JSON.parse(localStorage.getItem('customMenus')) || [];
+      customMenus.push(newItem);
+      localStorage.setItem('customMenus', JSON.stringify(customMenus));
+      renderMenu();
+
+      document.getElementById('namaMenu').value = '';
+      document.getElementById('hargaMenu').value = '';
+      document.getElementById('gambarMenu').value = '';
+      form.style.display = 'none';
+    }
+
+    // Render menu dari localStorage
+    function renderMenu() {
+      const savedMenus = JSON.parse(localStorage.getItem('customMenus')) || [];
+      const existingMenus = document.querySelectorAll('.menu-item.custom');
+      existingMenus.forEach(m => m.remove());
+
+      savedMenus.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.classList.add('menu-item', 'custom');
+        div.innerHTML = `
+          <img src="${item.gambar}" alt="${item.nama}">
+          <h3>${item.nama}</h3>
+          <p class="harga">Rp ${Number(item.harga).toLocaleString()}</p>
+          <a href="checkout.html?nama=${encodeURIComponent(item.nama)}&harga=${item.harga}&jumlah=1" class="btn-bayar">BELI</a>
+          <button class="btn-hapus" onclick="hapusMenu(${index})">Hapus</button>
+        `;
+        menuContainer.appendChild(div);
+      });
+    }
+
+    // Hapus menu
+    function hapusMenu(index) {
+      if (!confirm('Yakin ingin menghapus menu ini?')) return;
+      let customMenus = JSON.parse(localStorage.getItem('customMenus')) || [];
+      customMenus.splice(index, 1);
+      localStorage.setItem('customMenus', JSON.stringify(customMenus));
+      renderMenu();
+    }
+
+    // Load menu saat halaman dibuka
+    renderMenu();
+  </script>
+<style>
+  .menu-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.menu-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background-color: #fafafa;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.menu-item .harga {
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.btn-bayar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-bayar:hover {
+  background-color: #1ebe5d;
+}
+
+/* Tombol tambah menu */
+.btn-tambah {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-tambah:hover {
+  background-color: #e68900;
+}
+
+/* Form tambah menu */
+.form-tambah {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-tambah input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-simpan {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-simpan:hover {
+  background-color: #43a047;
+}
+
+/* Tombol hapus menu */
+.btn-hapus {
+  margin-top: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-hapus:hover {
+  background-color: #c0392b;
+}
+</style>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - GOMIGO</title>
+  <link rel="stylesheet" href="style checkout.css" />
+</head>
+<body>
+  <div class="checkout-container">
+    <header>Checkout</header>
+
+    <style>
+          body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .checkout-container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    header {
+      background-color: #ee4d2d;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .section {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="number"], textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: none;
+    }
+    .summary {
+      background-color: #fff7f5;
+      padding: 15px;
+      border-radius: 0 0 12px 12px;
+    }
+    .summary div {
+      display: flex;
+      justify-content: space-between;
+      margin: 6px 0;
+    }
+    .summary strong {
+      color: #ee4d2d;
+    }
+    button, .btn-wa {
+      width: 100%;
+      background-color: #ee4d2d;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    button:hover, .btn-wa:hover {
+      background-color: #d8431f;
+    }
+
+    /* Notifikasi pop-up */
+    .notif {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: none;
+      font-size: 14px;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    </style>
+
+    <!-- IDENTITAS -->
+    <div class="section">
+      <label for="name">Nama Penerima</label>
+      <input type="text" id="name" placeholder="Masukkan nama Anda" />
+      
+      <label for="Email">Email</label>
+      <input type="text" id="Email" placeholder="Masukkan Email anda" />
+
+      <label for="address">Alamat Lengkap</label>
+      <textarea id="address" rows="3" placeholder="Masukkan alamat pengiriman"></textarea>
+
+      <label for="phone">Nomor Telepon / WhatsApp</label>
+      <input type="text" id="phone" placeholder="Masukkan nomor telepon" />
+    </div>
+
+    <!-- BARANG -->
+    <div class="section">
+      <label for="product">Nama Produk</label>
+      <input type="text" id="product" readonly />
+
+      <label for="quantity">Jumlah</label>
+      <input type="number" id="quantity" placeholder="Jumlah barang" />
+
+      <label for="price">Harga per Item (Rp)</label>
+      <input type="number" id="price" readonly />
+    </div>
+
+    <!-- METODE PEMBAYARAN -->
+    <div class="section">
+      <label for="payment">Metode Pembayaran</label>
+      <select id="payment">
+        <option value="">-- Pilih Metode Pembayaran --</option>
+        <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="Dana">Dana</option>
+        <option value="Gopay">Gopay</option>
+        <option value="ShopeePay">ShopeePay</option>
+      </select>
+    </div>
+
+    <!-- HITUNG -->
+    <div class="summary">
+      <div><span>Subtotal</span><span id="subtotal">Rp0</span></div>
+      <div><span>Ongkir</span><span id="shipping">Rp0</span></div>
+      <div><strong>Total</strong><strong id="total">Rp0</strong></div>
+
+      <button onclick="calculateTotal()">Hitung Total</button>
+      <button class="btn-wa" id="waButton" onclick="bayar()">Bayar Sekarang</button>
+    </div>
+  </div>
+
+  <div class="notif" id="notif">✅ Terima kasih! Pesanan kamu sedang diproses.</div>
+
+  <script>
+    // Ambil parameter dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const namaProduk = urlParams.get("nama");
+    const hargaProduk = urlParams.get("harga");
+    const jumlahProduk = urlParams.get("jumlah");
+
+    if (namaProduk) document.getElementById("product").value = namaProduk;
+    if (hargaProduk) document.getElementById("price").value = hargaProduk;
+    if (jumlahProduk) document.getElementById("quantity").value = jumlahProduk;
+
+    if (hargaProduk && jumlahProduk) {
+      calculateTotal();
+    }
+
+    function calculateTotal() {
+      const price = Number(document.getElementById('price').value) || 0;
+      const qty = Number(document.getElementById('quantity').value) || 0;
+      const subtotal = price * qty;
+      const shipping = subtotal > 0 ? 3000 : 0;
+      const total = subtotal + shipping;
+
+      document.getElementById('subtotal').textContent = `Rp${subtotal.toLocaleString('id-ID')}`;
+      document.getElementById('shipping').textContent = `Rp${shipping.toLocaleString('id-ID')}`;
+      document.getElementById('total').textContent = `Rp${total.toLocaleString('id-ID')}`;
+    }
+
+    function bayar() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('Email').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const payment = document.getElementById('payment').value.trim();
+      const product = document.getElementById('product').value.trim();
+      const quantity = document.getElementById('quantity').value.trim();
+      const price = document.getElementById('price').value.trim();
+
+      if (!name || !email || !address || !phone || !payment) {
+        alert('⚠️ Harap isi semua data pengiriman terlebih dahulu!');
+        return;
+      }
+
+      // Simpan data ke localStorage
+      const orderData = { name, email, address, phone, payment, product, quantity, price };
+      localStorage.setItem('orderData', JSON.stringify(orderData));
+
+      // Arahkan ke halaman informasi
+      window.location.href = 'informasi.html';
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesanan Berhasil - GOMIGO</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f5f0;
+      color: #5a3210;
+      text-align: center;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      color: #6b3e26;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 600px;
+    }
+    td {
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    strong {
+      color: #6b3e26;
+    }
+    .status {
+      background-color: #fff5e6;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #8b4513;
+      color: white;
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+    }
+    .btn:hover {
+      background-color: #a0522d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Yeyyy pesanan Anda berhasil dibuat!</h1>
+  <hr style="width: 60%;">
+
+  <table>
+    <tr><td><strong>Nama</strong></td><td id="nama">-</td></tr>
+    <tr><td><strong>Email</strong></td><td id="email">-</td></tr>
+    <tr><td><strong>Alamat</strong></td><td id="alamat">-</td></tr>
+    <tr><td><strong>Nomor Telepon</strong></td><td id="telepon">-</td></tr>
+    <tr><td><strong>Pembayaran</strong></td><td id="pembayaran">-</td></tr>
+    <tr><td><strong>Pesanan</strong></td><td id="pesanan">-</td></tr>
+  </table>
+
+  <div class="status">📦 <strong>Status Pesanan:</strong> Pesanan sedang disiapkan</div>
+
+  <br><a href="beranda.html" class="btn">Kembali</a>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem('orderData'));
+    if (data) {
+      document.getElementById('nama').textContent = data.name;
+      document.getElementById('email').textContent = data.email;
+      document.getElementById('alamat').textContent = data.address;
+      document.getElementById('telepon').textContent = data.phone;
+      document.getElementById('pembayaran').textContent = data.payment;
+      document.getElementById('pesanan').textContent = `${data.quantity} x ${data.product} (Rp${Number(data.price).toLocaleString('id-ID')})`;
+    }
+  </script>
+</body>
+</html>
+
+
+
